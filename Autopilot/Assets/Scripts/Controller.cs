@@ -14,6 +14,7 @@ public class Controller : MonoBehaviour
     public Camera childCamera;
     public Transform adultBody;
     public Transform childBody;
+    public bool timeTravelEnabled;
 
     // Use this for initialization
     void Start()
@@ -21,12 +22,13 @@ public class Controller : MonoBehaviour
         sceneChanger = sceneChangePrefab.GetComponent<SceneChange>();
         adultCamera.GetComponent<Camera>().enabled = true;
         childCamera.GetComponent<Camera>().enabled = false;
+        timeTravelEnabled = true;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Input.GetButtonDown("CameraSwitch"))
+        if (Input.GetButtonDown("CameraSwitch") && timeTravelEnabled)
         {
             if(sceneChanger != null)
             {
@@ -39,5 +41,15 @@ public class Controller : MonoBehaviour
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
         adultBody.position += move * speed * Time.deltaTime;
         childBody.position += move * speed * Time.deltaTime;
+    }
+
+    void EnableTimeTravel()
+    {
+        timeTravelEnabled = true;
+    }
+
+    void DisableTimeTravel()
+    {
+        timeTravelEnabled = false;
     }
 }

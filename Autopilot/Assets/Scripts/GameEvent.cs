@@ -29,7 +29,7 @@ namespace Assets.Scripts
             //probably should unsub to avoid memory leaks
             Counter++;
             Debug.Log("Event: " + EventName + " has had the counter incremented");
-            if(Counter>=Thresh)
+            if(Counter>=Thresh && !Flag)
             {
                 Flag = true;
                 Debug.Log(EventName + " has flag triggered");

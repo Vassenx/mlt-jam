@@ -5,31 +5,56 @@ using Assets.Scripts;
 
 public class GameManager : MonoBehaviour
 {
-    GameEvent CollectCylinder;
-    [SerializeField] GameItem capsule;
-    [SerializeField] GameItem cube;
-    [SerializeField] GameItem cylinder;
+    GameEvent SpawnKey;
+    GameEvent UnlockDoor;
+    [SerializeField]
+    GameItem tricycle;
+    [SerializeField]
+    GameItem key;
+    [SerializeField]
+    GameItem door;
 
     void Start()
     {
-        CollectCylinder = new GameEvent("Collect the Cylinder", 2, new List<GameItem> { capsule, cube });
-        CollectCylinder.flagHasChanged += cylinder.SetEnabled;
+        SpawnKey = new GameEvent("Spawn the Key", 1, new List<GameItem> { tricycle });
+        UnlockDoor = new GameEvent("Unlock the Door", 1, new List<GameItem> { key });
+        SpawnKey.flagHasChanged += Event_SpawnKey;
+        UnlockDoor.flagHasChanged += Event_UnlockDoor;
+        door.collectedHasChanged += Event_DoorFade;
+    }
+
+    void Event_DoorFade()
+    {
+        Debug.Log("Init door fade"); //Replace with actual fade for animation.
+    }
+
+    void Event_SpawnKey()
+    {
+        key.GetComponent<MeshRenderer>().enabled = true;
+        Debug.Log("The key is now visible");
+        key.SetEnabled();
+    }
+
+    void Event_UnlockDoor()
+    {
+        Debug.Log("The door is now unlocked");
+        door.SetEnabled();
     }
 
     //This update is for debugging purposes, should SetCollected() should be managed by the player picking up objects
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.T))
         {
-            capsule.SetCollected();
+            tricycle.SetCollected();
         }
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(KeyCode.K))
         {
-            cube.SetCollected();
+            key.SetCollected();
         }
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.P))
         {
-            cylinder.SetCollected();
+            door.SetCollected();
         }
     }
 }

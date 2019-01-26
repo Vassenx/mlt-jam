@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 1324815479}
   - component: {fileID: 1324815478}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -213,9 +213,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d723302ea0df1a45afb7fadd6ab17cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Cube
-  Description: A cube made for loving
-  Enabled: 1
+  Name: Door
+  Description: How to unlock
+  Enabled: 0
 --- !u!65 &1324815479
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -302,7 +302,7 @@ GameObject:
   - component: {fileID: 1597884377}
   - component: {fileID: 1597884376}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -320,9 +320,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d723302ea0df1a45afb7fadd6ab17cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Capsule
-  Description: A lovely little sule
-  Enabled: 1
+  Name: Key
+  Description: Useful for entering places
+  Enabled: 0
 --- !u!136 &1597884377
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -410,7 +410,7 @@ GameObject:
   - component: {fileID: 1725781162}
   - component: {fileID: 1725781161}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: Tricycle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -428,8 +428,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d723302ea0df1a45afb7fadd6ab17cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Cylinder
-  Description: One whose heart is sealed
+  Name: Tricycle
+  Description: There appears to be a note
   Enabled: 0
 --- !u!136 &1725781162
 CapsuleCollider:
@@ -632,9 +632,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e964f9c8bfee1ab40be666b996013df0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  capsule: {fileID: 1597884376}
-  cube: {fileID: 1324815478}
-  cylinder: {fileID: 1725781161}
+  tricycle: {fileID: 1725781161}
+  key: {fileID: 1597884376}
+  door: {fileID: 1324815478}
 --- !u!4 &1926987205
 Transform:
   m_ObjectHideFlags: 0
@@ -659,6 +659,11 @@ PrefabInstance:
     - target: {fileID: 8620211051309639922, guid: b140e33db18b9de48a164bbc41fbdf27,
         type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8620211051309639922, guid: b140e33db18b9de48a164bbc41fbdf27,
+        type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8620211051309639920, guid: b140e33db18b9de48a164bbc41fbdf27,
