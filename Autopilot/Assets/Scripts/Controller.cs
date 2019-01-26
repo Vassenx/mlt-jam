@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class Controller : MonoBehaviour
 {
-    public float speed;
+    public GameObject sceneChangePrefab;
+    SceneChange sceneChanger;
+
+    private float pixelsPerUnit = 16;
+
+    public float speed = 10;
     public Camera adultCamera;
     public Camera childCamera;
     public Transform adultBody;
@@ -14,6 +19,7 @@ public class Controller : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        sceneChanger = sceneChangePrefab.GetComponent<SceneChange>();
         adultCamera.GetComponent<Camera>().enabled = true;
         childCamera.GetComponent<Camera>().enabled = false;
         timeTravelEnabled = true;
@@ -24,10 +30,15 @@ public class Controller : MonoBehaviour
     {
         if (Input.GetButtonDown("CameraSwitch") && timeTravelEnabled)
         {
+            if(sceneChanger != null)
+            {
+                sceneChanger.activateSceneChange();
+            }
+            
             adultCamera.GetComponent<Camera>().enabled = !adultCamera.GetComponent<Camera>().enabled;
             childCamera.GetComponent<Camera>().enabled = !childCamera.GetComponent<Camera>().enabled;
         }
-        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
+        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
         adultBody.position += move * speed * Time.deltaTime;
         childBody.position += move * speed * Time.deltaTime;
     }
