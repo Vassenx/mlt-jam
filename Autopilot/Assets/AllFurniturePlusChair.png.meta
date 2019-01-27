@@ -1,0 +1,1055 @@
+fileFormatVersion: 2
+guid: eb10f38ae823914469c175a0feb12368
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: AllFurniturePlusChair_0
+    21300002: AllFurniturePlusChair_1
+    21300004: AllFurniturePlusChair_2
+    21300006: AllFurniturePlusChair_3
+    21300008: AllFurniturePlusChair_4
+    21300010: AllFurniturePlusChair_5
+    21300012: AllFurniturePlusChair_6
+    21300014: AllFurniturePlusChair_7
+    21300016: AllFurniturePlusChair_8
+    21300018: AllFurniturePlusChair_9
+    21300020: AllFurniturePlusChair_10
+    21300022: AllFurniturePlusChair_11
+    21300024: AllFurniturePlusChair_12
+    21300026: AllFurniturePlusChair_13
+    21300028: AllFurniturePlusChair_14
+    21300030: AllFurniturePlusChair_15
+    21300032: AllFurniturePlusChair_16
+    21300034: AllFurniturePlusChair_17
+    21300036: AllFurniturePlusChair_18
+    21300038: AllFurniturePlusChair_19
+    21300040: AllFurniturePlusChair_20
+    21300042: AllFurniturePlusChair_21
+    21300044: AllFurniturePlusChair_22
+    21300046: AllFurniturePlusChair_23
+    21300048: AllFurniturePlusChair_24
+    21300050: AllFurniturePlusChair_25
+    21300052: AllFurniturePlusChair_26
+    21300054: AllFurniturePlusChair_27
+    21300056: AllFurniturePlusChair_28
+    21300058: AllFurniturePlusChair_29
+    21300060: AllFurniturePlusChair_30
+    21300062: AllFurniturePlusChair_31
+    21300064: AllFurniturePlusChair_32
+    21300066: AllFurniturePlusChair_33
+    21300068: AllFurniturePlusChair_34
+    21300070: AllFurniturePlusChair_35
+    21300072: AllFurniturePlusChair_36
+    21300074: AllFurniturePlusChair_37
+    21300076: AllFurniturePlusChair_38
+    21300078: AllFurniturePlusChair_39
+    21300080: AllFurniturePlusChair_40
+    21300082: AllFurniturePlusChair_41
+    21300084: AllFurniturePlusChair_42
+    21300086: AllFurniturePlusChair_43
+    21300088: AllFurniturePlusChair_44
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_0
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 477
+        width: 126
+        height: 144
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbdc43dc2e49a114bb3cf973f4187dee
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_1
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 583
+        width: 43
+        height: 20
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a57be16aca041f5428835e931298b18d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_2
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 573
+        width: 16
+        height: 21
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92bc40824c81d034d96b62598c31db50
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_3
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 576
+        width: 18
+        height: 9
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1606153c63267f54bba02f44da15a2cc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_4
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 476
+        width: 33
+        height: 78
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daed51cee857bea4ebbb1460ec2c8f0c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_5
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 531
+        width: 43
+        height: 34
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e064f4e26cf8ae040a028c9936d66638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_6
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 543
+        width: 11
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 216590c09d1dea04ba6df6c1356beef5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_7
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 546
+        width: 13
+        height: 12
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 521c8730fea80ea4e8a67da8f9ffba3d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_8
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 480
+        width: 16
+        height: 11
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7c2620bbe97c5644a1e060a6fc5b956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_9
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 459
+        width: 20
+        height: 7
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 292e8e26d928c7b4a936c025048a55dc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_10
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 432
+        width: 53
+        height: 35
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cac3c3cfd6bed3b459238c6bcf2233a2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_11
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 431
+        width: 36
+        height: 34
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20caf0d3afbf3204e873b117af117fb9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_12
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 431
+        width: 21
+        height: 33
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d6705159e01142478c3ed35e797dbba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_13
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 431
+        width: 21
+        height: 33
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc30300c597c1df4aa1efefe6f2ed51c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_14
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 412
+        width: 37
+        height: 60
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7fbc41fca320df4e8ed9d15ded12972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_15
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 426
+        width: 72
+        height: 37
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29ce3c7891e8b2a4a8a4a4328dd32724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_16
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 445
+        width: 10
+        height: 11
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba9c8c4991ecfb14fac5304920d446df
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_17
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 393
+        width: 38
+        height: 18
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 511989eed7520a3408d3cf5c17f8a49a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_18
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 378
+        width: 39
+        height: 42
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca9eb6cd6a38ef94cb32b599614b5f1b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_19
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 404
+        width: 14
+        height: 10
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93458b23bca4c2340b62963487e580f3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_20
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 337
+        width: 25
+        height: 71
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2472129e5085bc4d829ef9a001c5cf9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_21
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 350
+        width: 37
+        height: 60
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd40c978a2e632648bfc33f665f37eae
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_22
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 395
+        width: 14
+        height: 5
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 772be1f60cdb37443a712d7fb11600cc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_23
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 338
+        width: 20
+        height: 20
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aac6bd81c4d908489b9de1a351a81fc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_24
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 338
+        width: 20
+        height: 49
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e3110bde04650f40a679a39b958d6c6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_25
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 338
+        width: 86
+        height: 33
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b0e7736b360949408aa7cde2ec85307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_26
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 303
+        width: 42
+        height: 39
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5813de291606f24ca4138cf2d10ffe2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_27
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 313
+        width: 15
+        height: 15
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d00c50d946b2b714eb0443c4af2b9124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_28
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 299
+        width: 17
+        height: 26
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bd194efaaa3c6e439084efff865e809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_29
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 304
+        width: 17
+        height: 26
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd2547d7e8cd7b540a1e463ff6b52d49
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_30
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 299
+        width: 17
+        height: 26
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff5ddb0951ad9b84f8cba0eb873deb1a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_31
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 310
+        width: 38
+        height: 17
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 400cfaf4f41fe0f419d99c9cb0e1f8a1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_32
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 262
+        width: 17
+        height: 26
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cb824af67223e9449c2919c27a163d0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_33
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 267
+        width: 17
+        height: 26
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0de3de05a4fda8b44ba3d5c48a3ad3c4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_34
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 262
+        width: 17
+        height: 26
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bd2bf0225622044fa43f146b1a7ccf9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_35
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 238
+        width: 33
+        height: 65
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bd011949ac49cb4bb7abc3693cf4211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_36
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 238
+        width: 53
+        height: 44
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 990bc56a4f292eb489fabad58eb1c414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_37
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 238
+        width: 28
+        height: 37
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aecc8bb4572840f4bbc8d6249ad030dd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_38
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 218
+        width: 63
+        height: 33
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c19e6cdb6f73f864987f35ff6e32e073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_39
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 238
+        width: 15
+        height: 10
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e46f860cd2ebaed4eb8e7016a45d1b03
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_40
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 186
+        width: 83
+        height: 47
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1c8c813f48fa814ca17784e1ed63002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_41
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 186
+        width: 49
+        height: 47
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 084c0d6095963384395a38bca5ab28c2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_42
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 138
+        width: 47
+        height: 38
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8e272186069a4a489aa2ff4f0774dec
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_43
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 19
+        width: 180
+        height: 113
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4e64b57b0a4c5f409d8e08f5540c1cb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AllFurniturePlusChair_44
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 28
+        width: 20
+        height: 33
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d94705870663b343af00ab0af939ab4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 37aad3041d9166147b54aa42fe763c7f
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

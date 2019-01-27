@@ -6,8 +6,16 @@ public class Controller : MonoBehaviour
 {
     public GameObject sceneChangePrefab;
     public GameObject sceneChangePrefab_C;
+
     SceneChange sceneChanger;
     SceneChange sceneChanger_C;
+
+    [SerializeField]
+    GameObject adultLights;
+    [SerializeField]
+    GameObject childLights;
+    [SerializeField]
+    AudioSource rain;
 
     private float pixelsPerUnit = 16;
 
@@ -29,6 +37,8 @@ public class Controller : MonoBehaviour
     }
 
     //freeze movements
+
+    /*
     public void stopMovements()
     {
         adultBody.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
@@ -40,7 +50,7 @@ public class Controller : MonoBehaviour
         adultBody.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
         childBody.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
     }
-
+    */
 
     private void Update()
     {
@@ -48,17 +58,30 @@ public class Controller : MonoBehaviour
         {
             childBody.GetComponent<Collider2D>().enabled = false;
             adultBody.GetComponent<Collider2D>().enabled = true;
+
             Vector3 pos = adultBody.position;
             pos.z = childBody.position.z;
             childBody.position = pos;
+
+            adultLights.SetActive(true);
+            childLights.SetActive(false);
+
+            rain.Play();
         }
+
         else
         {
             adultBody.GetComponent<Collider2D>().enabled = false;
             childBody.GetComponent<Collider2D>().enabled = true;
+
             Vector3 pos = childBody.position;
             pos.z = adultBody.position.z;
             adultBody.position = pos;
+
+            adultLights.SetActive(false);
+            childLights.SetActive(true);
+
+            rain.Stop();
         }
     }
 
