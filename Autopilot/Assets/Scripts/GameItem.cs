@@ -22,7 +22,7 @@ public class GameItem : MonoBehaviour
     {
         if(Enabled)
         {
-            Debug.Log(item.name + " has been collected");
+            //Debug.Log(item.name + " has been collected");
             Collected = true;
             if(collectedHasChanged != null)
                 collectedHasChanged();
@@ -31,6 +31,11 @@ public class GameItem : MonoBehaviour
 
            // Destroy(gameObject); 
         }
+    }
+
+    public Item getItem()
+    {
+        return item; 
     }
 
     public void SetEnabled()
