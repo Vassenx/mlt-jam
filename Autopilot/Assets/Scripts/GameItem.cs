@@ -4,40 +4,44 @@ using Assets.Scripts;
 
 public class GameItem : MonoBehaviour
 {
-    [SerializeField] Item item; 
+    [SerializeField]
+    string Name;
+    [SerializeField]
+    string Description;
+    [SerializeField]
+    string UniteractableText;
+    public bool Collected;
+    public bool Enabled;
+    public Sprite Icon;
+    public bool Grabable;
+    public bool Contains;
 
     public delegate void CollectedHasChanged();
     public event CollectedHasChanged collectedHasChanged;
 
     public void SetCollected()
     {
-        if(item.enabled && !item.collected)
+        if((Enabled && !Collected) || (Enabled && !Grabable))
         {
-
-            Debug.Log("Player interacted with " + item.name);
             //If object has sound play it here
             // Run interaction text here too
-            item.collected = true;
+            Debug.Log(Name + ": " + Description);
+            Collected = true;
             if(collectedHasChanged != null)
                 collectedHasChanged();
         } else
         {
-            Debug.Log(item.uninteractableText);
+            Debug.Log(UniteractableText);
         }
-    }
-
-    public Item getItem()
-    {
-        return item; 
     }
 
     public void SetEnabled()
     {
-        item.enabled = true;
+        Enabled = true;
     }
     
     public void SetDisabled()
     {
-        item.enabled = false;
+        Enabled = false;
     }
 }

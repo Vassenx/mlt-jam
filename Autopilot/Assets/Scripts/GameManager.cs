@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
     GameItem cable1, cable2, cable3, dad, vcr;
     [SerializeField]
     GameItem playerPainting, dadPainting, mumPainting;
+    [SerializeField]
+    Sprite BrokenPiggySprite;
 
     void Start()
     {
@@ -114,6 +116,7 @@ public class GameManager : MonoBehaviour
 
     void Event_ChangeBankSprite()
     {
+        presentPiggyBank.GetComponent<SpriteRenderer>().sprite = BrokenPiggySprite;
         Debug.Log("I could use this money in the future"); //Change future bank sprite to broken
         presentPiggyBank.SetEnabled();
     }
@@ -131,7 +134,7 @@ public class GameManager : MonoBehaviour
 
     void Event_SpawnKey()
     {
-        key.GetComponent<MeshRenderer>().enabled = true;
+        key.GetComponent<SpriteRenderer>().enabled = true;
         key.SetEnabled();
     }
 
@@ -144,7 +147,7 @@ public class GameManager : MonoBehaviour
     }
 
     //This update is for debugging purposes, should SetCollected() should be managed by the player picking up objects
-    void Update()
+    /*void Update()
     {
         if (Input.GetKeyDown(KeyCode.Z))
         {
@@ -218,5 +221,5 @@ public class GameManager : MonoBehaviour
         {
             vcr.SetCollected();
         }
-    }
+    }*/
 }

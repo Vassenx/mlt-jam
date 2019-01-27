@@ -18,5 +18,5 @@ MonoBehaviour:
   collected: 0
   enabled: 0
   contains: 0
-  grabable: 0
+  grabable: 1
   uninteractableText: 
