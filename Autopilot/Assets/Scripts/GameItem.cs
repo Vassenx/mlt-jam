@@ -9,6 +9,8 @@ public class GameItem : MonoBehaviour
     [SerializeField] string UniteractableText;
     private bool Collected;
     [SerializeField] bool Enabled;
+    [SerializeField] Item item; 
+
     public delegate void CollectedHasChanged();
     public event CollectedHasChanged collectedHasChanged;
 
@@ -21,6 +23,7 @@ public class GameItem : MonoBehaviour
     {
         if(Enabled && !Collected)
         {
+
             Debug.Log("Player interacted with " + Name);
             Collected = true;
             if(collectedHasChanged != null)
@@ -31,11 +34,21 @@ public class GameItem : MonoBehaviour
         }
     }
 
+    public Item getItem()
+    {
+        return item; 
+    }
+
     public void SetEnabled()
     {
         Enabled = true;
     }
 
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        SetCollected(); 
+    }
+    
     public void SetDisabled()
     {
         Enabled = false;
