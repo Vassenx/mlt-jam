@@ -53,7 +53,7 @@ public class SceneChange : MonoBehaviour
     {
         if (sceneChange)
         {
-            player.GetComponent<Controller>().stopMovements();
+            //player.GetComponent<Controller>().stopMovements();
             if(!fadeInDone) fadeIn();
             if(fadeInDone) fadeOut();
 
@@ -65,6 +65,6 @@ public class SceneChange : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         fadeInDone = true;
         startTime = Time.time;
-        player.GetComponent<Controller>().startMovements();
+        //x`player.GetComponent<Controller>().startMovements();
     }
 }

@@ -5,13 +5,13 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     float xOffset = 0f;
-    float yOffset = 1.5f;
+    float yOffset = 1f;
     float zOffset = 0f;
 
     //screen bounds
     float xMin = -20;
     float xMax = 20;
-    float yMin = -5;
+    float yMin = -6;
     float yMax = 8;
 
     public GameObject player;
