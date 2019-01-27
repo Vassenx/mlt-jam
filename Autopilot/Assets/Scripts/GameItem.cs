@@ -6,6 +6,7 @@ public class GameItem : MonoBehaviour
 {
     [SerializeField] string Name;
     [SerializeField] string Description;
+    [SerializeField] string UniteractableText;
     private bool Collected;
     [SerializeField] bool Enabled;
     public delegate void CollectedHasChanged();
@@ -18,12 +19,15 @@ public class GameItem : MonoBehaviour
 
     public void SetCollected()
     {
-        if(Enabled)
+        if(Enabled && !Collected)
         {
             Debug.Log(Name + " has been collected");
             Collected = true;
             if(collectedHasChanged != null)
                 collectedHasChanged();
+        } else
+        {
+            Debug.Log(UniteractableText);
         }
     }
 
@@ -31,5 +35,11 @@ public class GameItem : MonoBehaviour
     {
         Debug.Log(Name + " has been enabled");
         Enabled = true;
+    }
+
+    public void SetDisabled()
+    {
+        Debug.Log(Name + "has been disabled");
+        Enabled = false;
     }
 }
