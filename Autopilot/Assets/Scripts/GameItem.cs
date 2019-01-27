@@ -9,6 +9,8 @@ public class GameItem : MonoBehaviour
     [SerializeField] string UniteractableText;
     private bool Collected;
     [SerializeField] bool Enabled;
+    [SerializeField] Item item; 
+
     public delegate void CollectedHasChanged();
     public event CollectedHasChanged collectedHasChanged;
 
@@ -21,7 +23,10 @@ public class GameItem : MonoBehaviour
     {
         if(Enabled && !Collected)
         {
-            Debug.Log(Name + " has been collected");
+
+            Debug.Log("Player interacted with " + Name);
+            //If object has sound play it here
+            // Run interaction text here too
             Collected = true;
             if(collectedHasChanged != null)
                 collectedHasChanged();
@@ -31,15 +36,23 @@ public class GameItem : MonoBehaviour
         }
     }
 
+    public Item getItem()
+    {
+        return item; 
+    }
+
     public void SetEnabled()
     {
-        Debug.Log(Name + " has been enabled");
         Enabled = true;
     }
 
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        SetCollected(); 
+    }
+    
     public void SetDisabled()
     {
-        Debug.Log(Name + "has been disabled");
         Enabled = false;
     }
 }
