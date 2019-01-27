@@ -8,6 +8,8 @@ public class GameItem : MonoBehaviour
     [SerializeField] string Description;
     private bool Collected;
     [SerializeField] bool Enabled;
+    [SerializeField] Item item; 
+
     public delegate void CollectedHasChanged();
     public event CollectedHasChanged collectedHasChanged;
 
@@ -20,10 +22,14 @@ public class GameItem : MonoBehaviour
     {
         if(Enabled)
         {
-            Debug.Log(Name + " has been collected");
+            Debug.Log(item.name + " has been collected");
             Collected = true;
             if(collectedHasChanged != null)
                 collectedHasChanged();
+
+            //Inventory.instance.Add(item);
+
+           // Destroy(gameObject); 
         }
     }
 
@@ -31,5 +37,10 @@ public class GameItem : MonoBehaviour
     {
         Debug.Log(Name + " has been enabled");
         Enabled = true;
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        SetCollected(); 
     }
 }
