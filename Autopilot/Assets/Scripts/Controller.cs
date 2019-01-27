@@ -24,6 +24,8 @@ public class Controller : MonoBehaviour
     public float speed = 10;
     public Camera adultCamera;
     public Camera childCamera;
+    public GameObject adultFurniture;
+    public GameObject childFurniture;
     public Transform adultBody;
     public Transform childBody;
     public bool timeTravelEnabled;
@@ -132,20 +134,15 @@ public class Controller : MonoBehaviour
                 if (itemColliders.Length != 0)
                 {
                     GameItem gItem = itemColliders[selectedItem].GetComponent<GameItem>(); 
-                    Item itemToAdd = itemColliders[selectedItem].GetComponent<GameItem>().getItem();
-                    if (itemToAdd.grabable)
+                    gItem.SetCollected();
+                    if (gItem.Grabable && gItem.Collected)
                     {
-                        Inventory.instance.Add(itemToAdd);
-                        gItem.SetCollected();
-                        if (!itemToAdd.contains)
+                        Inventory.instance.Add(gItem);
+                        if (!gItem.Contains)
                         {
                             Destroy(itemColliders[selectedItem].gameObject);
                         }
                        
-                    }
-                    else
-                    {
-                        Debug.Log("Inspection - " + itemToAdd.uninteractableText);
                     }
                 }
 
@@ -187,9 +184,6 @@ public class Controller : MonoBehaviour
                     selectedItem = 0;
                 }
                 textList[selectedItem].color = Color.red;
-
-                Debug.Log(selectedItem);
-
             }
             else if (Input.GetKeyDown(KeyCode.S))
             {
@@ -201,7 +195,6 @@ public class Controller : MonoBehaviour
                 }
 
                 textList[selectedItem].color = Color.red;
-                Debug.Log(selectedItem);
             }
         }
 
@@ -225,7 +218,9 @@ public class Controller : MonoBehaviour
             }
             
             adultCamera.GetComponent<Camera>().enabled = !adultCamera.GetComponent<Camera>().enabled;
+            adultFurniture.SetActive(!adultFurniture.activeInHierarchy);
             childCamera.GetComponent<Camera>().enabled = !childCamera.GetComponent<Camera>().enabled;
+            childFurniture.SetActive(!childFurniture.activeInHierarchy);
         }
 
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
@@ -292,9 +287,9 @@ public class Controller : MonoBehaviour
 
                 foreach (var collider in itemColliders)
                 {
-                    Debug.Log(collider);
-                    Item gameItem = collider.gameObject.GetComponent<GameItem>().getItem();
-                    textList[i].text = gameItem.name;
+                    GameItem gameItem = collider.gameObject.GetComponent<GameItem>();
+                    if(gameItem != null && collider.gameObject.GetComponent<SpriteRenderer>().enabled)
+                        textList[i].text = gameItem.name;
                     i++;
                 }
             }

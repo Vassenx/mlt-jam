@@ -21,9 +21,9 @@ public class Inventory : MonoBehaviour
     public OnItemChanged onItemChangedCallback; 
     public int space = 10; 
 
-    public List<Item> items = new List<Item>(); 
+    public List<GameItem> items = new List<GameItem>(); 
 
-    public void Add(Item item)
+    public void Add(GameItem item)
     {
         if (items.Count < space)
              items.Add(item);
@@ -32,7 +32,7 @@ public class Inventory : MonoBehaviour
             onItemChangedCallback.Invoke(); 
     }
 
-    public void Remove(Item item)
+    public void Remove(GameItem item)
     {
         items.Remove(item);
 
