@@ -22,6 +22,8 @@ public class GameItem : MonoBehaviour
         if(Enabled && !Collected)
         {
             Debug.Log("Player interacted with " + Name);
+            //If object has sound play it here
+            // Run interaction text here too
             Collected = true;
             if(collectedHasChanged != null)
                 collectedHasChanged();

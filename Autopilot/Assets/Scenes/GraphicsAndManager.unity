@@ -3036,7 +3036,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Pantry
   Description: Smells like old spice
-  UniteractableText: You're not really hungry
+  UniteractableText: I'm not really hungry
   Enabled: 0
 --- !u!1 &213359067
 GameObject:
@@ -3455,6 +3455,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 947228343214859765, guid: 32bee05beddc755429f1905d96ed3f05,
+        type: 3}
+      propertyPath: UniteractableText
+      value: Piggy needs more money
+      objectReference: {fileID: 0}
+    - target: {fileID: 947228342888713792, guid: 32bee05beddc755429f1905d96ed3f05,
+        type: 3}
+      propertyPath: UniteractableText
+      value: Wish I had saved more
+      objectReference: {fileID: 0}
+    - target: {fileID: 947228341946262081, guid: 32bee05beddc755429f1905d96ed3f05,
+        type: 3}
+      propertyPath: UniteractableText
+      value: I'm not really hungry
+      objectReference: {fileID: 0}
+    - target: {fileID: 947228342313460332, guid: 32bee05beddc755429f1905d96ed3f05,
+        type: 3}
+      propertyPath: UniteractableText
+      value: I'm not really hungry
+      objectReference: {fileID: 0}
+    - target: {fileID: 947228342950004074, guid: 32bee05beddc755429f1905d96ed3f05,
+        type: 3}
+      propertyPath: UniteractableText
+      value: I'm not really hungry
+      objectReference: {fileID: 0}
+    - target: {fileID: 947228343634411560, guid: 32bee05beddc755429f1905d96ed3f05,
+        type: 3}
+      propertyPath: UniteractableText
+      value: I'm not really hungry
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32bee05beddc755429f1905d96ed3f05, type: 3}
@@ -4898,7 +4928,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Toaster
   Description: A ping a ding ding
-  UniteractableText: You're not really hungry
+  UniteractableText: I'm not really hungry
   Enabled: 0
 --- !u!1 &407984671
 GameObject:
@@ -8408,7 +8438,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Piggy Bank
   Description: A piggy across time
-  UniteractableText: Not yet full
+  UniteractableText: Wish I had saved more
   Enabled: 0
 --- !u!1 &711007122
 GameObject:
@@ -10967,7 +10997,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Microwave
   Description: Mum says to not stare a it
-  UniteractableText: You're not really hungry
+  UniteractableText: I'm not really hungry
   Enabled: 0
 --- !u!1 &878358794
 GameObject:
@@ -13769,7 +13799,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Fridge
   Description: So packed with goodies
-  UniteractableText: You're not really hungry
+  UniteractableText: I'm not really hungry
   Enabled: 0
 --- !u!1 &1107629320
 GameObject:
@@ -23554,7 +23584,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Piggy Bank
   Description: A piggy to the past
-  UniteractableText: Needs more money
+  UniteractableText: Piggy needs more money
   Enabled: 0
 --- !u!1 &1781555544
 GameObject:
