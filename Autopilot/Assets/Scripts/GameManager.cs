@@ -26,14 +26,14 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        SpawnKey = new GameEvent("Spawn the Key", 1, new List<GameItem> { tricycle });
-        UnlockDoor = new GameEvent("Unlock the Door", 1, new List<GameItem> { key });
-        BreakPiggy = new GameEvent("Break the bank", 3, new List<GameItem> { coin1, coin2, coin3 });
-        DiscoverReceipe = new GameEvent("Learn the receipe", 1, new List<GameItem> { mum });
-        MakeSandwhich = new GameEvent("Make a sandwhich", 3, new List<GameItem> { presentFridge, presentMicrowave, presentPantry });
-        LearnRepair = new GameEvent("Dad teaches VCR repair", 3, new List<GameItem> { cable1, cable2, cable3 });
-        FixVCR = new GameEvent("Fix the VCR", 1, new List<GameItem> { dad });
-        EndGame = new GameEvent("The Attic is open", 3, null);
+        SpawnKey = new GameEvent("Located the Key", 1, new List<GameItem> { tricycle });
+        UnlockDoor = new GameEvent("Unlocked the Door", 1, new List<GameItem> { key });
+        BreakPiggy = new GameEvent("Broke the bank", 3, new List<GameItem> { coin1, coin2, coin3 });
+        DiscoverReceipe = new GameEvent("Learned the receipe from Mum", 1, new List<GameItem> { mum });
+        MakeSandwhich = new GameEvent("Made a sandwhich", 3, new List<GameItem> { presentFridge, presentMicrowave, presentPantry });
+        LearnRepair = new GameEvent("Learnt VCR repair from Dad", 3, new List<GameItem> { cable1, cable2, cable3 });
+        FixVCR = new GameEvent("Fixed the VCR", 1, new List<GameItem> { dad });
+        EndGame = new GameEvent("Opened the Attic", 3, null);
 
         SpawnKey.flagHasChanged += Event_SpawnKey;
         UnlockDoor.flagHasChanged += Event_UnlockDoor;

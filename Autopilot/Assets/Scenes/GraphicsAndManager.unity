@@ -3446,6 +3446,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 947228343385906184, guid: 32bee05beddc755429f1905d96ed3f05,
+        type: 3}
+      propertyPath: UniteractableText
+      value: The door is locked
+      objectReference: {fileID: 0}
     - target: {fileID: 947228342981532885, guid: 32bee05beddc755429f1905d96ed3f05,
         type: 3}
       propertyPath: m_Enabled
@@ -21001,7 +21006,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Door
   Description: How to unlock
-  UniteractableText: Door is locked
+  UniteractableText: The door is locked
   Enabled: 0
 --- !u!65 &1616680791
 BoxCollider:
@@ -22086,27 +22091,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e964f9c8bfee1ab40be666b996013df0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tricycle: {fileID: 0}
-  key: {fileID: 0}
-  door: {fileID: 0}
-  pastPiggyBank: {fileID: 0}
-  presentPiggyBank: {fileID: 0}
-  coin1: {fileID: 0}
-  coin2: {fileID: 0}
-  coin3: {fileID: 0}
-  mum: {fileID: 0}
-  presentFridge: {fileID: 0}
-  presentPantry: {fileID: 0}
-  presentMicrowave: {fileID: 0}
-  presentToaster: {fileID: 0}
-  cable1: {fileID: 0}
-  cable2: {fileID: 0}
-  cable3: {fileID: 0}
-  dad: {fileID: 0}
-  vcr: {fileID: 0}
-  playerPainting: {fileID: 0}
-  dadPainting: {fileID: 0}
-  mumPainting: {fileID: 0}
+  tricycle: {fileID: 1484201328}
+  key: {fileID: 1958821655}
+  door: {fileID: 1616680790}
+  pastPiggyBank: {fileID: 1772256155}
+  presentPiggyBank: {fileID: 706707891}
+  coin1: {fileID: 80634858}
+  coin2: {fileID: 1913318195}
+  coin3: {fileID: 2109588792}
+  mum: {fileID: 60368294}
+  presentFridge: {fileID: 1104151817}
+  presentPantry: {fileID: 213280149}
+  presentMicrowave: {fileID: 877892803}
+  presentToaster: {fileID: 406509587}
+  cable1: {fileID: 702435233}
+  cable2: {fileID: 1519411527}
+  cable3: {fileID: 1698289262}
+  dad: {fileID: 570354440}
+  vcr: {fileID: 303747324}
+  playerPainting: {fileID: 1314827142}
+  dadPainting: {fileID: 1682837483}
+  mumPainting: {fileID: 503469603}
 --- !u!1 &1688913302
 GameObject:
   m_ObjectHideFlags: 0

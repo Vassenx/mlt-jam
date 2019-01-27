@@ -21,7 +21,7 @@ public class GameItem : MonoBehaviour
     {
         if(Enabled && !Collected)
         {
-            Debug.Log(Name + " has been collected");
+            Debug.Log("Player interacted with " + Name);
             Collected = true;
             if(collectedHasChanged != null)
                 collectedHasChanged();
@@ -33,13 +33,11 @@ public class GameItem : MonoBehaviour
 
     public void SetEnabled()
     {
-        Debug.Log(Name + " has been enabled");
         Enabled = true;
     }
 
     public void SetDisabled()
     {
-        Debug.Log(Name + "has been disabled");
         Enabled = false;
     }
 }
