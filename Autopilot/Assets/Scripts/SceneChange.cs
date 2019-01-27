@@ -7,10 +7,12 @@ public class SceneChange : MonoBehaviour
     float fadeDuration = 100;
     float startTime = 0;
 
+    public GameObject player;
+
     private bool sceneChange;
     private bool fadeInDone;
     private float transparency;
-    private float speed = 100f;
+    private float speed = 50f;
     Renderer rend;
 
     private void Awake()
@@ -51,8 +53,10 @@ public class SceneChange : MonoBehaviour
     {
         if (sceneChange)
         {
+            player.GetComponent<Controller>().stopMovements();
             if(!fadeInDone) fadeIn();
             if(fadeInDone) fadeOut();
+
         }
     }
 
@@ -61,5 +65,6 @@ public class SceneChange : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         fadeInDone = true;
         startTime = Time.time;
+        player.GetComponent<Controller>().startMovements();
     }
 }
