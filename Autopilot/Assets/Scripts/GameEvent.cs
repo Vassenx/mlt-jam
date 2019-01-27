@@ -18,9 +18,12 @@ namespace Assets.Scripts
             Counter = 0;
             Thresh = threshold;
             EventName = name;
-            foreach(GameItem item in myItems)
+            if(myItems != null)
             {
-                item.collectedHasChanged += IncCounter;
+                foreach (GameItem item in myItems)
+                {
+                    item.collectedHasChanged += IncCounter;
+                }
             }
         }
 
