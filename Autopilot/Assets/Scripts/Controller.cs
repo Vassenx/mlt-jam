@@ -289,8 +289,10 @@ public class Controller : MonoBehaviour
                 {
                     GameItem gameItem = collider.gameObject.GetComponent<GameItem>();
                     if(gameItem != null && collider.gameObject.GetComponent<SpriteRenderer>().enabled)
+                    {
                         textList[i].text = gameItem.name;
-                    i++;
+                        i++;
+                    }
                 }
             }
         }
