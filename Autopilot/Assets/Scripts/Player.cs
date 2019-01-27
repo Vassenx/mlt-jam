@@ -14,7 +14,6 @@ public class Player : MonoBehaviour
 
     private bool hide_inventory = true;
     private bool hide_journal = true;
-    private bool canMove = true; 
     private Collider2D[] itemColliders2;
 
     private Text[] textList;
@@ -34,10 +33,8 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (canMove)
+        if (hide_inventory && hide_journal)
         {
-
-
             Vector3 vx = new Vector3(speed * Time.deltaTime, 0, 0);
             Vector3 vy = new Vector3(0, speed * Time.deltaTime, 0);
 
@@ -66,18 +63,21 @@ public class Player : MonoBehaviour
         // Toggle inventory
         if (Input.GetKeyDown(KeyCode.I))
         {
+            // If journal is not hidden
+            if (!hide_journal)
+            {
+                hide_journal = !hide_journal; 
+            }
             hide_inventory = !hide_inventory; 
         }
 
         if (hide_inventory)
         {
             inventory.SetActive(false);
-           
         } 
         else
         {
             inventory.SetActive(true);
-            
         }
 
         // Toggle journal 
@@ -85,18 +85,30 @@ public class Player : MonoBehaviour
         {
             if(!hide_journal)
             {
-                Item itemToAdd = itemColliders2[selectedItem].GetComponent<GameItem>().getItem();
-                Inventory.instance.Add(itemToAdd);
-                Destroy(itemColliders2[selectedItem].gameObject); 
+                if (itemColliders2.Length != 0)
+                {
+                    Item itemToAdd = itemColliders2[selectedItem].GetComponent<GameItem>().getItem();
+                    Inventory.instance.Add(itemToAdd);
+                    Destroy(itemColliders2[selectedItem].gameObject);
+                }
+                            
+            } 
+            else
+            {
+                // If inventory is open close it
+                if (!hide_inventory)
+                {
+                    hide_inventory = !hide_inventory; 
+                }
             }
+
             hide_journal = !hide_journal;
         }
 
         if (hide_journal)
         {
-            journal.SetActive(false);
-            canMove = true; 
-            //Text[] textList = journalList.GetComponentsInChildren<Text>();
+            journal.SetActive(false); 
+
             foreach (Text text in textList)
             {
                 text.text = "";
@@ -108,7 +120,6 @@ public class Player : MonoBehaviour
         else
         {
             journal.SetActive(true);
-            canMove = false;
 
             if (Input.GetKeyDown(KeyCode.W))
             {
@@ -150,32 +161,13 @@ public class Player : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, searchRadius);
     }
 
-    /*
-    void OnCollisionEnter2D(Collision2D col)
-    {
-        Debug.Log("Collision"); 
-        LayerMask mask = LayerMask.GetMask("Item");
-        itemColliders2 = Physics2D.OverlapCircleAll(transform.position, searchRadius, mask);
-
-        foreach (var collider in itemColliders2)
-        {
-            Debug.Log(collider.gameObject);
-        }
-    }
-
-    void OnCollisionExit2D(Collision2D col)
-    {
-        Debug.Log("Exit"); 
-        LayerMask mask = LayerMask.GetMask("Item");
-        itemColliders2 = Physics2D.OverlapCircleAll(transform.position, searchRadius, mask);
-    }*/
 
     public void checkInteractables()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
             int i = 0;
-            //Text[] textList = journalList.GetComponentsInChildren<Text>();
+            
             if (itemColliders2 != null)
             {
            
@@ -189,12 +181,5 @@ public class Player : MonoBehaviour
             }
         }
         
-        /*
-        Collider2D[] itemColliders = Physics2D.OverlapCircleAll(transform.position, searchRadius, mask);
-
-        foreach (var collider in itemColliders)
-        {
-             Debug.Log(collider.gameObject); 
-        }*/
     }
 }
