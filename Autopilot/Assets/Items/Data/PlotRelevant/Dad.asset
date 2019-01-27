@@ -17,4 +17,6 @@ MonoBehaviour:
   description: Description
   collected: 0
   enabled: 0
-  uninteractableText: 
+  contains: 0
+  grabable: 0
+  uninteractableText: He seems busy.

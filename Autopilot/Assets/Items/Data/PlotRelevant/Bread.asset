@@ -15,7 +15,8 @@ MonoBehaviour:
   name: Bread
   icon: {fileID: 21300018, guid: 1509fc374e8a54041bab45d71ac738ff, type: 3}
   description: Quite sad without anything inbetween
-  collected: 1
-  enabled: 0
+  collected: 0
+  enabled: 1
   contains: 1
+  grabable: 0
   uninteractableText: 

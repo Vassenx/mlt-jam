@@ -21,6 +21,8 @@ public class Controller : MonoBehaviour
 
     private float pixelsPerUnit = 16;
 
+    public AudioSource c_music;
+
     public float speed = 10;
     public Camera adultCamera;
     public Camera childCamera;
@@ -54,6 +56,8 @@ public class Controller : MonoBehaviour
 
         textList = journalList.GetComponentsInChildren<Text>();
         selectedItem = 0;
+
+        //this.adultBody.gameObject.GetComponent<Animator>().enabled = false;
     }
 
     //freeze movements
@@ -83,6 +87,8 @@ public class Controller : MonoBehaviour
             pos.z = childBody.position.z;
             childBody.position = pos;
 
+            c_music.Stop();
+
             adultLights.SetActive(true);
             childLights.SetActive(false);
 
@@ -100,6 +106,8 @@ public class Controller : MonoBehaviour
 
             adultLights.SetActive(false);
             childLights.SetActive(true);
+
+            c_music.Play();
 
             rain.Stop();
         }
@@ -133,19 +141,46 @@ public class Controller : MonoBehaviour
                 {
                     GameItem gItem = itemColliders[selectedItem].GetComponent<GameItem>(); 
                     Item itemToAdd = itemColliders[selectedItem].GetComponent<GameItem>().getItem();
-                    if (itemToAdd.grabable)
+                    if (itemToAdd != null)
                     {
-                        Inventory.instance.Add(itemToAdd);
-                        gItem.SetCollected();
-                        if (!itemToAdd.contains)
+
+                        if (itemToAdd.name.Equals("Present Stairs"))
                         {
-                            Destroy(itemColliders[selectedItem].gameObject);
+                            //adultBody.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+                            //Vector3 pos = this.adultBody.gameObject.transform.localScale;
+                            //float x = pos.x;
+                            //pos.x = 4;
+                            //this.adultBody.gameObject.transform.localScale = pos;
+                            //this.adultBody.gameObject.GetComponent<Animator>().SetTrigger("atStairsTrigger");
+                            //pos.x = x;
+                            //this.adultBody.gameObject.transform.localScale = pos;
+                            //adultBody.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+                            //stairs.Play("Adult_Stairs_Anim");
+
+                            //this.adultBody.gameObject.GetComponent<Animator>().SetTrigger("atStairsTrigger");
+                            this.adultBody.localPosition = new Vector3(19.57f, 6.3f, -11f);
                         }
-                       
-                    }
-                    else
-                    {
-                        Debug.Log("Inspection - " + itemToAdd.uninteractableText);
+
+
+                        if (itemToAdd.name.Equals("Past Stairs"))
+                        {
+                            this.childBody.localPosition = new Vector3(19.57f, 6.3f, 8f);
+                        }
+
+                        if (itemToAdd.grabable)
+                        {
+                            Inventory.instance.Add(itemToAdd);
+                            gItem.SetCollected();
+                            if (!itemToAdd.contains)
+                            {
+                                Destroy(itemColliders[selectedItem].gameObject);
+                            }
+
+                        }
+                        else
+                        {
+                            Debug.Log("Inspection - " + itemToAdd.uninteractableText);
+                        }
                     }
                 }
 
@@ -249,7 +284,9 @@ public class Controller : MonoBehaviour
             newLocalScale.x = -1 * Mathf.Abs(newLocalScale.x);
             adultBody.localScale = newLocalScale;
             childBody.localScale = newLocalScale;
-            AnimatePlayers(true);        }
+
+            AnimatePlayers(true);
+        }
 
         if (hide_journal && hide_inventory)
         {
@@ -268,7 +305,7 @@ public class Controller : MonoBehaviour
     void AnimatePlayers(bool isWalking)
     {
         childBody.GetComponent<Animator>().SetBool("isWalking", isWalking);
-        adultBody.GetComponent<Animator>().SetBool("isWalking", isWalking);
+        adultBody.gameObject.GetComponent<Animator>().SetBool("isWalking", isWalking);
     }
 
     void EnableTimeTravel()
@@ -294,7 +331,15 @@ public class Controller : MonoBehaviour
                 {
                     Debug.Log(collider);
                     Item gameItem = collider.gameObject.GetComponent<GameItem>().getItem();
-                    textList[i].text = gameItem.name;
+                    if(!gameItem)
+                    {
+                        Debug.Log("You must add an item to your game item script");
+                        continue;
+                    }
+                    if (gameItem.name != null)
+                    {
+                        textList[i].text = gameItem.name;
+                    }
                     i++;
                 }
             }

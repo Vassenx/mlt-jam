@@ -16,5 +16,7 @@ MonoBehaviour:
   icon: {fileID: 21300010, guid: b31765c78209b3843b8ddd9669e6751d, type: 3}
   description: Description
   collected: 0
-  enabled: 0
+  enabled: 1
+  contains: 0
+  grabable: 0
   uninteractableText: 

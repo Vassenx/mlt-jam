@@ -16,5 +16,7 @@ MonoBehaviour:
   icon: {fileID: 21300004, guid: 1509fc374e8a54041bab45d71ac738ff, type: 3}
   description: 'A tiny coin. '
   collected: 0
-  enabled: 0
+  enabled: 1
+  contains: 0
+  grabable: 0
   uninteractableText: 

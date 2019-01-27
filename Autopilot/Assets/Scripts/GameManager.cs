@@ -139,6 +139,8 @@ public class GameManager : MonoBehaviour
     {
         //Play Door Unlocking sound here if availible
         door.SetEnabled();
+        door.gameObject.GetComponent<PolygonCollider2D>().enabled = false;
+        door.gameObject.GetComponent<AudioSource>().Play();
     }
 
     //This update is for debugging purposes, should SetCollected() should be managed by the player picking up objects

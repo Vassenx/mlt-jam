@@ -16,5 +16,7 @@ MonoBehaviour:
   icon: {fileID: 21300002, guid: 4f7c4259b37a7594ab587407b086c062, type: 3}
   description: Description
   collected: 0
-  enabled: 0
-  uninteractableText: 
+  enabled: 1
+  contains: 0
+  grabable: 0
+  uninteractableText: Mom seems busy.
