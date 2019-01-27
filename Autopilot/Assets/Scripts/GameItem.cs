@@ -4,35 +4,25 @@ using Assets.Scripts;
 
 public class GameItem : MonoBehaviour
 {
-    [SerializeField] string Name;
-    [SerializeField] string Description;
-    [SerializeField] string UniteractableText;
-    private bool Collected;
-    [SerializeField] bool Enabled;
     [SerializeField] Item item; 
 
     public delegate void CollectedHasChanged();
     public event CollectedHasChanged collectedHasChanged;
 
-    void Start()
-    {
-
-    }
-
     public void SetCollected()
     {
-        if(Enabled && !Collected)
+        if(item.enabled && !item.collected)
         {
 
-            Debug.Log("Player interacted with " + Name);
+            Debug.Log("Player interacted with " + item.name);
             //If object has sound play it here
             // Run interaction text here too
-            Collected = true;
+            item.collected = true;
             if(collectedHasChanged != null)
                 collectedHasChanged();
         } else
         {
-            Debug.Log(UniteractableText);
+            Debug.Log(item.uninteractableText);
         }
     }
 
@@ -43,16 +33,11 @@ public class GameItem : MonoBehaviour
 
     public void SetEnabled()
     {
-        Enabled = true;
-    }
-
-    public void OnTriggerEnter2D(Collider2D collision)
-    {
-        SetCollected(); 
+        item.enabled = true;
     }
     
     public void SetDisabled()
     {
-        Enabled = false;
+        item.enabled = false;
     }
 }

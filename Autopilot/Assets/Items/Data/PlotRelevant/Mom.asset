@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 759a738fc1aa511438ed54bb2a060888, type: 3}
+  m_Name: Mom
+  m_EditorClassIdentifier: 
+  name: Mom
+  icon: {fileID: 21300002, guid: 4f7c4259b37a7594ab587407b086c062, type: 3}
+  description: Description
+  collected: 0
+  enabled: 0
+  uninteractableText: 

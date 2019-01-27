@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI; 
 
 public class Controller : MonoBehaviour
 {
     public GameObject sceneChangePrefab;
     public GameObject sceneChangePrefab_C;
+    public float y_search_offset;
 
     SceneChange sceneChanger;
     SceneChange sceneChanger_C;
@@ -26,6 +28,21 @@ public class Controller : MonoBehaviour
     public Transform childBody;
     public bool timeTravelEnabled;
 
+    public float searchRadius;
+
+    public GameObject inventory;
+    public GameObject journal;
+    public Transform journalList;
+
+    private bool hide_inventory = true;
+    private bool hide_journal = true;
+    private Collider2D[] itemColliders;
+
+    private Text[] textList;
+
+    private static int journal_slots = 6;
+    private int selectedItem;
+
     // Use this for initialization
     void Start()
     {
@@ -34,6 +51,9 @@ public class Controller : MonoBehaviour
         adultCamera.GetComponent<Camera>().enabled = true;
         childCamera.GetComponent<Camera>().enabled = false;
         timeTravelEnabled = true;
+
+        textList = journalList.GetComponentsInChildren<Text>();
+        selectedItem = 0;
     }
 
     //freeze movements
@@ -83,6 +103,114 @@ public class Controller : MonoBehaviour
 
             rain.Stop();
         }
+
+        // Toggle inventory
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            // If journal is not hidden
+            if (!hide_journal)
+            {
+                hide_journal = !hide_journal;
+            }
+            hide_inventory = !hide_inventory;
+        }
+
+        if (hide_inventory)
+        {
+            inventory.SetActive(false);
+        }
+        else
+        {
+            inventory.SetActive(true);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (!hide_journal)
+            {
+
+                if (itemColliders.Length != 0)
+                {
+                    GameItem gItem = itemColliders[selectedItem].GetComponent<GameItem>(); 
+                    Item itemToAdd = itemColliders[selectedItem].GetComponent<GameItem>().getItem();
+                    if (itemToAdd.grabable)
+                    {
+                        Inventory.instance.Add(itemToAdd);
+                        gItem.SetCollected();
+                        if (!itemToAdd.contains)
+                        {
+                            Destroy(itemColliders[selectedItem].gameObject);
+                        }
+                       
+                    }
+                    else
+                    {
+                        Debug.Log("Inspection - " + itemToAdd.uninteractableText);
+                    }
+                }
+
+            }
+            else
+            {
+                // If inventory is open close it
+                if (!hide_inventory)
+                {
+                    hide_inventory = !hide_inventory;
+                }
+            }
+
+            hide_journal = !hide_journal;
+        }
+
+        if (hide_journal)
+        {
+            journal.SetActive(false);
+
+            foreach (Text text in textList)
+            {
+                text.text = "";
+                text.color = Color.black;
+            }
+            selectedItem = 0;
+            textList[selectedItem].color = Color.red;
+        }
+        else
+        {
+            journal.SetActive(true);
+
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                textList[selectedItem].color = Color.black;
+                selectedItem--;
+                if (selectedItem < 0)
+                {
+                    selectedItem = 0;
+                }
+                textList[selectedItem].color = Color.red;
+
+                Debug.Log(selectedItem);
+
+            }
+            else if (Input.GetKeyDown(KeyCode.S))
+            {
+                textList[selectedItem].color = Color.black;
+                selectedItem++;
+                if (selectedItem > itemColliders.Length - 1)
+                {
+                    selectedItem = itemColliders.Length - 1;
+                }
+
+                textList[selectedItem].color = Color.red;
+                Debug.Log(selectedItem);
+            }
+        }
+
+
+        LayerMask mask = LayerMask.GetMask("Item");
+        Vector3 offset = new Vector3(0.0f, y_search_offset, 0.0f); 
+        
+        itemColliders = Physics2D.OverlapCircleAll(adultBody.position + offset, searchRadius, mask);
+        checkInteractables();
     }
 
     // Update is called once per frame
@@ -121,12 +249,20 @@ public class Controller : MonoBehaviour
             newLocalScale.x = -1 * Mathf.Abs(newLocalScale.x);
             adultBody.localScale = newLocalScale;
             childBody.localScale = newLocalScale;
-            AnimatePlayers(true);
+            AnimatePlayers(true);        }
+
+        if (hide_journal && hide_inventory)
+        {
+            adultBody.position += move * speed * Time.deltaTime;
+            childBody.position += move * speed * Time.deltaTime;
         }
+       
+    }
 
-
-        adultBody.position += move * speed * Time.deltaTime;
-        childBody.position += move * speed * Time.deltaTime;
+    void OnDrawGizmos()
+    {
+        Vector3 offset = new Vector3(0.0f, y_search_offset, 0.0f);
+        Gizmos.DrawWireSphere(adultBody.position + offset, searchRadius);
     }
 
     void AnimatePlayers(bool isWalking)
@@ -143,5 +279,26 @@ public class Controller : MonoBehaviour
     void DisableTimeTravel()
     {
         timeTravelEnabled = false;
+    }
+
+    public void checkInteractables()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            int i = 0;
+
+            if (itemColliders != null)
+            {
+
+                foreach (var collider in itemColliders)
+                {
+                    Debug.Log(collider);
+                    Item gameItem = collider.gameObject.GetComponent<GameItem>().getItem();
+                    textList[i].text = gameItem.name;
+                    i++;
+                }
+            }
+        }
+
     }
 }
