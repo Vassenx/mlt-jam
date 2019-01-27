@@ -18,9 +18,12 @@ namespace Assets.Scripts
             Counter = 0;
             Thresh = threshold;
             EventName = name;
-            foreach(GameItem item in myItems)
+            if(myItems != null)
             {
-                item.collectedHasChanged += IncCounter;
+                foreach (GameItem item in myItems)
+                {
+                    item.collectedHasChanged += IncCounter;
+                }
             }
         }
 
@@ -28,11 +31,10 @@ namespace Assets.Scripts
         {
             //probably should unsub to avoid memory leaks
             Counter++;
-            Debug.Log("Event: " + EventName + " has had the counter incremented");
-            if(Counter>=Thresh)
+            if(Counter>=Thresh && !Flag)
             {
                 Flag = true;
-                Debug.Log(EventName + " has flag triggered");
+                Debug.Log("You have " + EventName);
                 if(flagHasChanged != null)
                     flagHasChanged();
             }

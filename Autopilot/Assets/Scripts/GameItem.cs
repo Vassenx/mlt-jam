@@ -6,6 +6,7 @@ public class GameItem : MonoBehaviour
 {
     [SerializeField] string Name;
     [SerializeField] string Description;
+    [SerializeField] string UniteractableText;
     private bool Collected;
     [SerializeField] bool Enabled;
     [SerializeField] Item item; 
@@ -20,16 +21,16 @@ public class GameItem : MonoBehaviour
 
     public void SetCollected()
     {
-        if(Enabled)
+        if(Enabled && !Collected)
         {
-            //Debug.Log(item.name + " has been collected");
+
+            Debug.Log("Player interacted with " + Name);
             Collected = true;
             if(collectedHasChanged != null)
                 collectedHasChanged();
-
-            //Inventory.instance.Add(item);
-
-           // Destroy(gameObject); 
+        } else
+        {
+            Debug.Log(UniteractableText);
         }
     }
 
@@ -40,12 +41,16 @@ public class GameItem : MonoBehaviour
 
     public void SetEnabled()
     {
-        Debug.Log(Name + " has been enabled");
         Enabled = true;
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
         SetCollected(); 
+    }
+    
+    public void SetDisabled()
+    {
+        Enabled = false;
     }
 }
