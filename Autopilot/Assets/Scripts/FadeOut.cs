@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(BoxCollider2D))]
+[RequireComponent(typeof(Collider2D))]
 public class FadeOut : MonoBehaviour
 {
 
@@ -10,6 +10,7 @@ public class FadeOut : MonoBehaviour
     //float startTime = 0;
     float transparency = 0;
     Renderer rend;
+    AlphaChanger alphaChanger;
     bool insideBounds = false;
 
     GameObject target;
@@ -19,6 +20,7 @@ public class FadeOut : MonoBehaviour
     {
         insideBounds = false;
         rend = GetComponent<Renderer>();
+        alphaChanger = this.GetComponent<AlphaChanger>();
         //startTime = Time.time;
         target = null;
     }
@@ -42,7 +44,8 @@ public class FadeOut : MonoBehaviour
         {
             //Debug.Log(transparency);
             transparency = 1 - Mathf.Abs(target.transform.position.x - start) / Mathf.Abs(this.transform.position.x - start);
-            rend.material.SetFloat("_Transparency", transparency);
+            //rend.material.SetFloat("_Transparency", transparency);
+            alphaChanger.changeAlpha(transparency);
         }
         //transparency = Mathf.Lerp(0.9f, 0.0f, (Time.time - startTime) / fadeDuration);
         // rend.material.SetFloat("_Transparency", transparency);
