@@ -71,7 +71,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 1
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -89,7 +89,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,7 +100,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -125,9 +125,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 486
-        width: 48.75
-        height: 81
+        y: 558
+        width: 56
+        height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -135,7 +135,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9df948a2e64b6e0449eedbba0c3b760d
+      spriteID: ba9e9e36fd6b6b547a42289b3ed13875
       vertices: []
       indices: 
       edges: []
@@ -144,10 +144,10 @@ TextureImporter:
       name: AtticLadderSheet_1
       rect:
         serializedVersion: 2
-        x: 48
-        y: 486
-        width: 48.75
-        height: 81
+        x: 56
+        y: 558
+        width: 56
+        height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,7 +155,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94f79df0f57961941a7514707946c519
+      spriteID: f5e91bd442b0e4c4bb52a69ed6beda5a
       vertices: []
       indices: 
       edges: []
@@ -164,10 +164,10 @@ TextureImporter:
       name: AtticLadderSheet_2
       rect:
         serializedVersion: 2
-        x: 96
-        y: 486
-        width: 48.75
-        height: 81
+        x: 112
+        y: 558
+        width: 56
+        height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,7 +175,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82d1adca047fc66449f7a9587be8a956
+      spriteID: 9fdfe55136c3e08438a879482bcc664f
       vertices: []
       indices: 
       edges: []
@@ -184,10 +184,10 @@ TextureImporter:
       name: AtticLadderSheet_3
       rect:
         serializedVersion: 2
-        x: 144
-        y: 486
-        width: 48.75
-        height: 81
+        x: 168
+        y: 558
+        width: 56
+        height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,7 +195,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f24ed4982280d1441b469e290bd8e8aa
+      spriteID: bc7833366e125604c9b126c572f98bdc
       vertices: []
       indices: 
       edges: []
@@ -205,9 +205,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 405
-        width: 48.75
-        height: 81
+        y: 465
+        width: 56
+        height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,7 +215,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0cf6302398bb392469e357b457c76df5
+      spriteID: 5552a1bc1a0fad442b01e436bbe5ec00
       vertices: []
       indices: 
       edges: []
@@ -224,10 +224,10 @@ TextureImporter:
       name: AtticLadderSheet_5
       rect:
         serializedVersion: 2
-        x: 48
-        y: 405
-        width: 48.75
-        height: 81
+        x: 56
+        y: 465
+        width: 56
+        height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,7 +235,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: caf7eb4335c8a10458154dec20a31d7f
+      spriteID: 568ff4cb23301134aae08c2b5fc163a0
       vertices: []
       indices: 
       edges: []
@@ -244,10 +244,10 @@ TextureImporter:
       name: AtticLadderSheet_6
       rect:
         serializedVersion: 2
-        x: 96
-        y: 405
-        width: 48.75
-        height: 81
+        x: 112
+        y: 465
+        width: 56
+        height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,7 +255,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23fb1341b77ce5d429770f0fd4d595b5
+      spriteID: 26a4738b8674d3841a8c22d5bac3e4a7
       vertices: []
       indices: 
       edges: []
@@ -264,10 +264,10 @@ TextureImporter:
       name: AtticLadderSheet_7
       rect:
         serializedVersion: 2
-        x: 144
-        y: 405
-        width: 48.75
-        height: 81
+        x: 168
+        y: 465
+        width: 56
+        height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -275,7 +275,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b13266694a24eb4a8b96a9f9762f971
+      spriteID: 931c5717e3056984ba7d9004386e8626
       vertices: []
       indices: 
       edges: []
@@ -285,9 +285,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 324
-        width: 48.75
-        height: 81
+        y: 372
+        width: 56
+        height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -295,7 +295,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85e3b1ed7cfc7994aa19b2ce562f4727
+      spriteID: 19ce311deb68a904da7b2474384f6ae0
       vertices: []
       indices: 
       edges: []
@@ -304,10 +304,10 @@ TextureImporter:
       name: AtticLadderSheet_9
       rect:
         serializedVersion: 2
-        x: 48
-        y: 324
-        width: 48.75
-        height: 81
+        x: 56
+        y: 372
+        width: 56
+        height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,7 +315,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ccfebea462a60ab45bbc1b55574ca170
+      spriteID: 29870bb2c5b3d814aa707e02476d1c57
       vertices: []
       indices: 
       edges: []
@@ -324,10 +324,10 @@ TextureImporter:
       name: AtticLadderSheet_10
       rect:
         serializedVersion: 2
-        x: 96
-        y: 324
-        width: 48.75
-        height: 81
+        x: 112
+        y: 372
+        width: 56
+        height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -335,7 +335,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 574a5f39d450e9b4f828b427dcc00bc1
+      spriteID: c18da8a2fdd4e0e459f051a7855f7352
       vertices: []
       indices: 
       edges: []
@@ -344,10 +344,10 @@ TextureImporter:
       name: AtticLadderSheet_11
       rect:
         serializedVersion: 2
-        x: 144
-        y: 324
-        width: 48.75
-        height: 81
+        x: 168
+        y: 372
+        width: 56
+        height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -355,7 +355,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0288c4bc23cbe58428199ecf830defb6
+      spriteID: ffccad17243c0c54880d9551e187f4a2
       vertices: []
       indices: 
       edges: []
@@ -365,9 +365,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 243
-        width: 48.75
-        height: 81
+        y: 279
+        width: 56
+        height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -375,7 +375,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afaf2fa92500ed240afe1f156ed2d85a
+      spriteID: db526f750c53f8f45862af23c57d45c3
       vertices: []
       indices: 
       edges: []
@@ -384,10 +384,10 @@ TextureImporter:
       name: AtticLadderSheet_13
       rect:
         serializedVersion: 2
-        x: 48
-        y: 243
-        width: 48.75
-        height: 81
+        x: 56
+        y: 279
+        width: 56
+        height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -395,7 +395,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc7c759f1de3f6c4dba0e1791b38e3e4
+      spriteID: 591d35068634d554386961cb194a8f29
       vertices: []
       indices: 
       edges: []
@@ -404,10 +404,10 @@ TextureImporter:
       name: AtticLadderSheet_14
       rect:
         serializedVersion: 2
-        x: 96
-        y: 243
-        width: 48.75
-        height: 81
+        x: 112
+        y: 279
+        width: 56
+        height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -415,7 +415,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5104777e46671ea47afbdaa123882234
+      spriteID: 096c7b2c5ebb0604fa0dd5883e79db04
       vertices: []
       indices: 
       edges: []
@@ -424,10 +424,10 @@ TextureImporter:
       name: AtticLadderSheet_15
       rect:
         serializedVersion: 2
-        x: 144
-        y: 243
-        width: 48.75
-        height: 81
+        x: 168
+        y: 279
+        width: 56
+        height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -435,7 +435,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7acc8af8f3479b2488473f9a3618aede
+      spriteID: 14a6019e9d289f94bb90dc35f16fb12a
       vertices: []
       indices: 
       edges: []
@@ -445,9 +445,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 162
-        width: 48.75
-        height: 81
+        y: 186
+        width: 56
+        height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -455,7 +455,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc9be37bdc4ef864599345955d4c6486
+      spriteID: 320597ab6379e5648a1fc58181b76bbc
       vertices: []
       indices: 
       edges: []
@@ -464,10 +464,10 @@ TextureImporter:
       name: AtticLadderSheet_17
       rect:
         serializedVersion: 2
-        x: 48
-        y: 162
-        width: 48.75
-        height: 81
+        x: 56
+        y: 186
+        width: 56
+        height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -475,7 +475,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 215929f1bf865ef48bf5d4727ca180db
+      spriteID: 73291723aa4369646a2a57f315440541
       vertices: []
       indices: 
       edges: []
@@ -484,10 +484,10 @@ TextureImporter:
       name: AtticLadderSheet_18
       rect:
         serializedVersion: 2
-        x: 96
-        y: 162
-        width: 48.75
-        height: 81
+        x: 112
+        y: 186
+        width: 56
+        height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -495,7 +495,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8784cd32ec087df4dad25dbb29ae0da2
+      spriteID: e9da071d17313c644a63b7b8da6412ab
       vertices: []
       indices: 
       edges: []
@@ -504,10 +504,10 @@ TextureImporter:
       name: AtticLadderSheet_19
       rect:
         serializedVersion: 2
-        x: 144
-        y: 162
-        width: 48.75
-        height: 81
+        x: 168
+        y: 186
+        width: 56
+        height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -515,7 +515,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb6aa4372f4fd194793730bb4235a358
+      spriteID: b29def870a4905d4ca5b80e6357468c7
       vertices: []
       indices: 
       edges: []
@@ -525,9 +525,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 81
-        width: 48.75
-        height: 81
+        y: 93
+        width: 56
+        height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -535,7 +535,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b11646fa87b60cb4798c935011924daf
+      spriteID: 7904c8d177fcbfc47a7cef1ae7d860b8
       vertices: []
       indices: 
       edges: []
@@ -544,10 +544,10 @@ TextureImporter:
       name: AtticLadderSheet_21
       rect:
         serializedVersion: 2
-        x: 48
-        y: 81
-        width: 48.75
-        height: 81
+        x: 56
+        y: 93
+        width: 56
+        height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -555,7 +555,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f32dab337f8ed2343a34b91ea2467591
+      spriteID: ac9c4ecb74d59794ea7eb758d69d0626
       vertices: []
       indices: 
       edges: []
@@ -564,10 +564,10 @@ TextureImporter:
       name: AtticLadderSheet_22
       rect:
         serializedVersion: 2
-        x: 96
-        y: 81
-        width: 48.75
-        height: 81
+        x: 112
+        y: 93
+        width: 56
+        height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -575,7 +575,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7330d4c6a635c14aa7e03248b4bb790
+      spriteID: bb7de634898fae049bf8500d951ea454
       vertices: []
       indices: 
       edges: []
@@ -584,10 +584,10 @@ TextureImporter:
       name: AtticLadderSheet_23
       rect:
         serializedVersion: 2
-        x: 144
-        y: 81
-        width: 48.75
-        height: 81
+        x: 168
+        y: 93
+        width: 56
+        height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -595,7 +595,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 420b66f8d878fbe40a856bdd04c193e5
+      spriteID: 96c5164e1bdcaa34b80a3d7aa464cc92
       vertices: []
       indices: 
       edges: []
@@ -606,8 +606,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 48.75
-        height: 81
+        width: 56
+        height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -615,7 +615,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03b1cab4e982b604e9c33229dee8ce2c
+      spriteID: 360adfe9ed45b0f48a26a549bf9dc5da
       vertices: []
       indices: 
       edges: []
@@ -624,10 +624,10 @@ TextureImporter:
       name: AtticLadderSheet_25
       rect:
         serializedVersion: 2
-        x: 48
+        x: 56
         y: 0
-        width: 48.75
-        height: 81
+        width: 56
+        height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -635,7 +635,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec984ff0756f33b46ac1faee44d899e8
+      spriteID: 6205c9dce20d44d45b52e48f93313c2c
       vertices: []
       indices: 
       edges: []

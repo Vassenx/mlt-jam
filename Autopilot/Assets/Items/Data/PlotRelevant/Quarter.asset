@@ -15,6 +15,8 @@ MonoBehaviour:
   name: Quarter
   icon: {fileID: 21300006, guid: 1509fc374e8a54041bab45d71ac738ff, type: 3}
   description: Worth 25 cents
-  collected: 1
-  enabled: 0
+  collected: 0
+  enabled: 1
+  contains: 0
+  grabable: 0
   uninteractableText: 

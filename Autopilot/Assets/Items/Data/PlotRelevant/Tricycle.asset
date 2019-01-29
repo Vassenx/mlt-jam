@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Tricycle
   icon: {fileID: 21300010, guid: b31765c78209b3843b8ddd9669e6751d, type: 3}
-  description: Description
+  description: The key is behind the cat
   collected: 0
-  enabled: 0
-  uninteractableText: 
+  enabled: 1
+  contains: 0
+  grabable: 0
+  uninteractableText: Still unreachable

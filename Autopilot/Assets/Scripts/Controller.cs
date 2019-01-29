@@ -21,9 +21,13 @@ public class Controller : MonoBehaviour
 
     private float pixelsPerUnit = 16;
 
+    public AudioSource c_music;
+
     public float speed = 10;
     public Camera adultCamera;
     public Camera childCamera;
+    public GameObject adultFurniture;
+    public GameObject childFurniture;
     public Transform adultBody;
     public Transform childBody;
     public bool timeTravelEnabled;
@@ -54,6 +58,8 @@ public class Controller : MonoBehaviour
 
         textList = journalList.GetComponentsInChildren<Text>();
         selectedItem = 0;
+
+        //this.adultBody.gameObject.GetComponent<Animator>().enabled = false;
     }
 
     //freeze movements
@@ -83,6 +89,8 @@ public class Controller : MonoBehaviour
             pos.z = childBody.position.z;
             childBody.position = pos;
 
+            c_music.Stop();
+
             adultLights.SetActive(true);
             childLights.SetActive(false);
 
@@ -100,6 +108,8 @@ public class Controller : MonoBehaviour
 
             adultLights.SetActive(false);
             childLights.SetActive(true);
+
+            c_music.Play();
 
             rain.Stop();
         }
@@ -131,86 +141,104 @@ public class Controller : MonoBehaviour
 
                 if (itemColliders.Length != 0)
                 {
-                    GameItem gItem = itemColliders[selectedItem].GetComponent<GameItem>(); 
-                    Item itemToAdd = itemColliders[selectedItem].GetComponent<GameItem>().getItem();
-                    if (itemToAdd.grabable)
+                    GameItem gItem = itemColliders[selectedItem].GetComponent<GameItem>();
+
+                    GameItem itemToAdd = itemColliders[selectedItem].GetComponent<GameItem>();
+                    if (itemToAdd != null)
                     {
-                        Inventory.instance.Add(itemToAdd);
-                        gItem.SetCollected();
-                        if (!itemToAdd.contains)
+
+                        if (itemToAdd.name.Equals("Present Stairs"))
                         {
-                            Destroy(itemColliders[selectedItem].gameObject);
+                            this.adultBody.localPosition = new Vector3(19.57f, 6.3f, -11f);
                         }
-                       
+                        gItem.SetCollected();
+                        if (gItem.Grabable && gItem.Collected)
+                        {
+                            Inventory.instance.Add(gItem);
+                            if (!gItem.Contains)
+                            {
+
+                            }
+
+
+                            if (itemToAdd.name.Equals("Past Stairs"))
+                            {
+                                this.childBody.localPosition = new Vector3(19.57f, 6.3f, 8f);
+                            }
+
+                            if (itemToAdd.Grabable)
+                            {
+                                Inventory.instance.Add(itemToAdd);
+                                gItem.SetCollected();
+                                if (!itemToAdd.Contains)
+                                {
+                                    Destroy(itemColliders[selectedItem].gameObject);
+                                }
+
+                            }
+
+                        }
                     }
-                    else
+
+                }
+                else
+                {
+                    // If inventory is open close it
+                    if (!hide_inventory)
                     {
-                        Debug.Log("Inspection - " + itemToAdd.uninteractableText);
+                        hide_inventory = !hide_inventory;
                     }
                 }
 
+                hide_journal = !hide_journal;
+            }
+
+            if (hide_journal)
+            {
+                journal.SetActive(false);
+
+                foreach (Text text in textList)
+                {
+                    text.text = "";
+                    text.color = Color.black;
+                }
+                selectedItem = 0;
+                textList[selectedItem].color = Color.red;
             }
             else
             {
-                // If inventory is open close it
-                if (!hide_inventory)
+                journal.SetActive(true);
+
+                if (Input.GetKeyDown(KeyCode.W))
                 {
-                    hide_inventory = !hide_inventory;
+                    textList[selectedItem].color = Color.black;
+                    selectedItem--;
+                    if (selectedItem < 0)
+                    {
+                        selectedItem = 0;
+                    }
+                    textList[selectedItem].color = Color.red;
+                }
+                else if (Input.GetKeyDown(KeyCode.S))
+                {
+                    textList[selectedItem].color = Color.black;
+                    selectedItem++;
+                    if (selectedItem > itemColliders.Length - 1)
+                    {
+                        selectedItem = itemColliders.Length - 1;
+                    }
+
+                    textList[selectedItem].color = Color.red;
                 }
             }
 
-            hide_journal = !hide_journal;
+
+            LayerMask mask = LayerMask.GetMask("Item");
+            Vector3 offset = new Vector3(0.0f, y_search_offset, 0.0f);
+
+            itemColliders = Physics2D.OverlapCircleAll(adultBody.position + offset, searchRadius, mask);
+            checkInteractables();
         }
-
-        if (hide_journal)
-        {
-            journal.SetActive(false);
-
-            foreach (Text text in textList)
-            {
-                text.text = "";
-                text.color = Color.black;
-            }
-            selectedItem = 0;
-            textList[selectedItem].color = Color.red;
-        }
-        else
-        {
-            journal.SetActive(true);
-
-            if (Input.GetKeyDown(KeyCode.W))
-            {
-                textList[selectedItem].color = Color.black;
-                selectedItem--;
-                if (selectedItem < 0)
-                {
-                    selectedItem = 0;
-                }
-                textList[selectedItem].color = Color.red;
-
-                Debug.Log(selectedItem);
-
-            }
-            else if (Input.GetKeyDown(KeyCode.S))
-            {
-                textList[selectedItem].color = Color.black;
-                selectedItem++;
-                if (selectedItem > itemColliders.Length - 1)
-                {
-                    selectedItem = itemColliders.Length - 1;
-                }
-
-                textList[selectedItem].color = Color.red;
-                Debug.Log(selectedItem);
-            }
-        }
-
-
-        LayerMask mask = LayerMask.GetMask("Item");
-        Vector3 offset = new Vector3(0.0f, y_search_offset, 0.0f); 
-        
-        itemColliders = Physics2D.OverlapCircleAll(adultBody.position + offset, searchRadius, mask);
-        checkInteractables();
     }
 
     // Update is called once per frame
@@ -225,7 +253,9 @@ public class Controller : MonoBehaviour
             }
             
             adultCamera.GetComponent<Camera>().enabled = !adultCamera.GetComponent<Camera>().enabled;
+            adultFurniture.SetActive(!adultFurniture.activeInHierarchy);
             childCamera.GetComponent<Camera>().enabled = !childCamera.GetComponent<Camera>().enabled;
+            childFurniture.SetActive(!childFurniture.activeInHierarchy);
         }
 
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
@@ -249,7 +279,9 @@ public class Controller : MonoBehaviour
             newLocalScale.x = -1 * Mathf.Abs(newLocalScale.x);
             adultBody.localScale = newLocalScale;
             childBody.localScale = newLocalScale;
-            AnimatePlayers(true);        }
+
+            AnimatePlayers(true);
+        }
 
         if (hide_journal && hide_inventory)
         {
@@ -268,7 +300,7 @@ public class Controller : MonoBehaviour
     void AnimatePlayers(bool isWalking)
     {
         childBody.GetComponent<Animator>().SetBool("isWalking", isWalking);
-        adultBody.GetComponent<Animator>().SetBool("isWalking", isWalking);
+        adultBody.gameObject.GetComponent<Animator>().SetBool("isWalking", isWalking);
     }
 
     void EnableTimeTravel()
@@ -293,9 +325,23 @@ public class Controller : MonoBehaviour
                 foreach (var collider in itemColliders)
                 {
                     Debug.Log(collider);
-                    Item gameItem = collider.gameObject.GetComponent<GameItem>().getItem();
-                    textList[i].text = gameItem.name;
-                    i++;
+                    GameItem gameItem = collider.gameObject.GetComponent<GameItem>();
+                    if(!gameItem)
+                    {
+                        Debug.Log("You must add an item to your game item script");
+                        continue;
+                    }
+                    if (gameItem.name != null)
+                    {
+                        textList[i].text = gameItem.name;
+                    }
+
+                    GameItem a = collider.gameObject.GetComponent<GameItem>();
+                        if (a != null && collider.gameObject.GetComponent<SpriteRenderer>().enabled) {
+                            textList[i].text = a.name;
+
+                            i++;
+                        }
                 }
             }
         }

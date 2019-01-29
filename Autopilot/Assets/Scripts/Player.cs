@@ -87,7 +87,7 @@ public class Player : MonoBehaviour
             {
                 if (itemColliders2.Length != 0)
                 {
-                    Item itemToAdd = itemColliders2[selectedItem].GetComponent<GameItem>().getItem();
+                    GameItem itemToAdd = itemColliders2[selectedItem].GetComponent<GameItem>();
                     Inventory.instance.Add(itemToAdd);
                     Destroy(itemColliders2[selectedItem].gameObject);
                 }
@@ -130,9 +130,6 @@ public class Player : MonoBehaviour
                     selectedItem = 0;
                 }
                 textList[selectedItem].color = Color.red;
-
-                Debug.Log(selectedItem);
-
             }
             else if (Input.GetKeyDown(KeyCode.S))
             {
@@ -144,7 +141,6 @@ public class Player : MonoBehaviour
                 }
 
                 textList[selectedItem].color = Color.red;
-                Debug.Log(selectedItem);
             }
 
             
@@ -173,9 +169,9 @@ public class Player : MonoBehaviour
            
                 foreach (var collider in itemColliders2)
                 {
-                    Debug.Log(collider); 
-                    Item gameItem = collider.gameObject.GetComponent<GameItem>().getItem();
-                    textList[i].text = gameItem.name;
+                    GameItem gameItem = collider.gameObject.GetComponent<GameItem>();
+                    if(gameItem != null)
+                        textList[i].text = gameItem.name;
                     i++; 
                 }
             }

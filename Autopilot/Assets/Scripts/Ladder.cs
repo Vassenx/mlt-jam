@@ -12,8 +12,17 @@ public class Ladder : MonoBehaviour
         {
             this.GetComponent<Animator>().SetBool("pullLadder", true);
             this.GetComponent<AudioSource>().Play();
+
+            StartCoroutine(Waity(collision));
+
         }
 
         ladderDown = true;
+    }
+
+    IEnumerator Waity(Collider2D collision)
+    {
+        yield return new WaitForSeconds(2);
+        collision.gameObject.transform.localPosition = new Vector3(16.6f, 10.29f, -11f);
     }
 }
