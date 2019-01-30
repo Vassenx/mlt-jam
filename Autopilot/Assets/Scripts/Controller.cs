@@ -45,6 +45,9 @@ public class Controller : MonoBehaviour
     private static int journal_slots = 6;
     private int selectedItem;
 
+    public GameObject inspectorUI;
+    public Text inspectorText;
+
     // Use this for initialization
     void Start()
     {
